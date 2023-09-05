@@ -1,0 +1,38 @@
+[
+	{
+		"title": "Auricular",
+		"description": "Auricular casi Original",
+		"price": 7900,
+		"thumbnail": "_http://src/imagen.jpg",
+		"code": "Cod92",
+		"stock": 3,
+		"id": 0
+	},
+	{
+		"title": "PC gamer Nitusa",
+		"description": "PC completa",
+		"price": 143000,
+		"thumbnail": "http://src/imagenPC.jpg",
+		"code": "ab2",
+		"stock": 3,
+		"id": 1
+	},
+	{
+		"title": "Modificado Teclado",
+		"description": "Mouse ergonimico antiManc",
+		"price": 2000,
+		"thumbnail": "http://src/imagenMouse.jpg",
+		"code": "c39",
+		"stock": 99,
+		"id": 2
+	},
+	{
+		"title": "Teclado Inalambrico",
+		"description": "Teclado Genius inalambrico",
+		"price": 1500,
+		"thumbnail": "http://src/img_teclado912389.jpg",
+		"code": "ma993",
+		"stock": 3,
+		"id": 3
+	}
+]
