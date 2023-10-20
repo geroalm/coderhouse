@@ -3,7 +3,7 @@ import { Router } from "express";
 const router = Router();
 
 router.get("/",(req,res)=>{
-    console.log("RUTA login/home");
+    console.log("RUTA /home");
     res.render("home");
 });
 
@@ -12,18 +12,21 @@ router.get("/signup",(req,res)=>{
 });
 
 router.get("/login",(req,res)=>{
-    console.log("RUTA login/login");
+    console.log("RUTA /login");
     res.render("loginView");
 });
 
 router.get("/profile",(req,res)=>{
-    console.log("RUTA /login/profile");
+    console.log("RUTA /profile");
     if(req.session?.email){
-        const userEmail = req.session.email;
-        res.render("profileView",{userEmail});
+        const email = req.session.email;
+        const role = req.session.role;
+        const user ={email:email, role:role};
+
+        res.render("profileView",{user});
     } else {
         console.log("REDIRECT /login");
-        res.redirect("/login/login");
+        res.redirect("/login");
     }
 });
 

@@ -5,7 +5,6 @@ const router = Router();
 
 router.post("/signup", async(req,res)=>{
     try {
-        console.log("RURA /api/session/signup -> session.route");
         const signupForm = req.body;
         const result = await usersModel.create(signupForm);
         res.render("loginView",{message:"Usuario registrado correctamente"});
@@ -16,6 +15,7 @@ router.post("/signup", async(req,res)=>{
 
 router.post("/login", async(req,res)=>{
     try {
+        console.log("Login attempt ",req.body);
         const loginForm = req.body;
         const user = await usersModel.findOne({email:loginForm.email});
         if(!user || user.password !== loginForm.password){
@@ -23,6 +23,8 @@ router.post("/login", async(req,res)=>{
         }
         //ususario existe y contraseña valida, entonces creamos la session del usuario
         req.session.email = user.email;
+        req.session.role = user.role;
+        
         res.redirect("/profile");
     } catch (error) {
         console.log(error);
@@ -34,7 +36,7 @@ router.get("/logout", async(req,res)=>{
     try {
         req.session.destroy(err=>{
             if(err) return res.render("profileView",{error:"No se pudo cerrar la sesion"});
-            res.redirect("/");
+            res.redirect("/login");
         })
     } catch (error) {
         res.render("signupView",{error:"No se pudo registrar el usuario"});

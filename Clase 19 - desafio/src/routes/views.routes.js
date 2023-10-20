@@ -3,12 +3,6 @@ import { cartsService, chatService, productsService } from "../dao/index.js";
 
 const router = Router();
 
-router.get("/", async(req,res)=>{
-    const products = await productsService.getProducts(true);
-    console.log("products",products);
-    res.render("home",{products:products});
-});
-
 router.get("/products", async(req,res)=>{
     const baseUrl = `${req.protocol}://${req.get('host')}${req.originalUrl}`;
     const {limit=3,page=1,category,stock} = req.query //desestructurar query
@@ -43,8 +37,7 @@ router.get("/products", async(req,res)=>{
                 nextLink: result.hasNextPage?baseUrl.includes("page")?baseUrl.replace(`page=${result.page}`,`page=${result.nextPage}`):baseUrl.concat(`?page=${result.nextPage}`) :null
                 
             }
-            console.log(result.docs);
-            res.render("products",{products:dataProd});
+            res.render("products",{products:dataProd,email:req.session.email});
         } catch (error) {
             console.log(error);
             res.status(500).json({ status: 'error', message: error.message });

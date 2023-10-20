@@ -9,9 +9,9 @@ import { SocketController } from "./socketController.js";
 import { connectDB } from "./config/dbCOnnection.js";
 import { sessionsRouter } from "./routes/sessions.routes.js";
 import { viewsLoginRouter } from "./routes/views.login.routes.js";
-import session from "express-session";
 import MongoStore from "connect-mongo";
-import cookieParser from "cookie-parser";
+import session from "express-session";
+
 
 const port = 8080;
 let server;
@@ -26,34 +26,33 @@ export class CoderServer {
     
     start(){
     server = this.http.listen(port,()=>console.log("Servidor iniciado..."));
-    
 
+    socketController = new SocketController(server);
+    }
+
+    setupRoutes() { 
 
     //configuración de session
     this.http.use(session({
         store: MongoStore.create({
-            ttl:3000,
+            ttl:30, // se resetea por cada peticion, si pasan los 30 mongoStore se encarga de gestionar la eliminacion
             mongoUrl:"mongodb+srv://geroalm:p1642qdLrBHfCSfE@gacluster.xjkvp7e.mongodb.net/Ecommerce01?retryWrites=true&w=majority",
         }),
         secret:"secretSessionCoder",
         resave:true,
         saveUninitialized:true
     }));
-
-    socketController = new SocketController(server);
-    }
-
-    setupRoutes() { 
+        
         this.http.use(express.static(path.join(__dirname,"/public"))); // Carpeta publica
         this.http.use(express.json())
         this.http.use(express.urlencoded({ extended: true }))
         
         this.http.use("/api/products/",productRoutes);
-        this.http.use(viewsRouter);
+        this.http.use("/views",viewsRouter);
         this.http.use("/api/carts/",cartRoutes);
 
         this.http.use("/api/sessions", sessionsRouter);
-        this.http.use("/login",viewsLoginRouter);
+        this.http.use(viewsLoginRouter);
 
 
         }
