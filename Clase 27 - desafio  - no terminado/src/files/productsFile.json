@@ -1,0 +1,98 @@
+[
+	{
+		"id": 1,
+		"title": "Licuadora",
+		"description": "Philip licuadora hogareña",
+		"price": 200,
+		"thumbnail": [
+			"http://example.com/camiseta1.jpg",
+			"http://example.com/camiseta2.jpg"
+		],
+		"code": "liqu31",
+		"stock": 30,
+		"status": false
+	},
+	{
+		"id": 2,
+		"title": "TItile Prod 2",
+		"description": "Desc Prod 2",
+		"price": 79.99,
+		"thumbnail": [
+			"http://example.com/zapatos1.jpg",
+			"http://example.com/zapatos2.jpg"
+		],
+		"code": "ZPT123",
+		"stock": 50,
+		"status": false
+	},
+	{
+		"id": 3,
+		"title": "Titulo 3",
+		"description": "Descripcion 3",
+		"price": 299.99,
+		"thumbnail": [
+			"http://example.com/smartphone1.jpg",
+			"http://example.com/smartphone2.jpg"
+		],
+		"code": "SPH123",
+		"stock": 30,
+		"status": false
+	},
+	{
+		"id": 4,
+		"title": "Titulo 4",
+		"description": "Desc 4",
+		"price": 49.99,
+		"thumbnail": [
+			"http://example.com/cafetera1.jpg",
+			"http://example.com/cafetera2.jpg"
+		],
+		"code": "CFTR123",
+		"stock": 25,
+		"status": false
+	},
+	{
+		"id": 5,
+		"title": "Titulo 5",
+		"description": "Descripcion 5",
+		"price": 199.99,
+		"thumbnail": [
+			"http://example.com/tablet1.jpg",
+			"http://example.com/tablet2.jpg"
+		],
+		"code": "TBLT123",
+		"stock": 20,
+		"category": "CATE",
+		"status": true
+	},
+	{
+		"title": "TITLE001",
+		"description": "DESC001",
+		"price": 100,
+		"code": "COD01",
+		"stock": "10",
+		"category": "CATE",
+		"id": 6,
+		"status": false
+	},
+	{
+		"title": "Producto OK",
+		"description": "Descr OK",
+		"price": 100,
+		"code": "Cod0001",
+		"stock": "20",
+		"category": "Sasa",
+		"id": 12,
+		"status": true
+	},
+	{
+		"title": "Bicicleta ",
+		"description": "La bici bmx2000",
+		"price": 3000,
+		"code": "bici001",
+		"stock": "1",
+		"category": "Bicicletas alta gama",
+		"id": 13,
+		"status": true
+	}
+]
