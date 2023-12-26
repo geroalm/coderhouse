@@ -1,0 +1,25 @@
+<div class="mx-auto" style="width: 400px;">
+<h1>Pagina Registro</h1>
+
+<p style="color:red">{{error}}</p>
+
+<form method="post" action="/api/sessions/signup">
+    <input type="text" name="first_name" placeholder="Tu nombre"/>
+    <br/><br/>
+     <input type="text" name="last_name" placeholder="Tu apellido"/>
+    <br/><br/>
+    <input type="email" name="email" placeholder="Tu Correo"/>
+    <br/><br/>
+    <input type="password" name="password" placeholder="Tu Contraseña"/>
+    <br/><br/>
+    <input type="radio" name="role" value="user" checked="true"> user
+    <input type="radio" name="role" value="admin"> administrator
+    <br/><br/>
+
+
+    <button class="btn btn-secundary">Registrarse</button>
+        <a class="btn btn-primary" href="/api/sessions/signup-github"> Git-hub
+
+    </a>
+</form>
+</div>
