@@ -55,6 +55,7 @@ export class CartsController {
                 const cart = await CartsService.getCartById(cartId);
                 product = await ProductsService.getProductById(productId)
             }
+            //
             catch (error) {
                 // modificar manager para que no devuelva error si o encuentra, debe devolver null
                 //lo capturo para no interrumpir la ejecucion
