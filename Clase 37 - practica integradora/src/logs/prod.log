@@ -1,0 +1,29 @@
+{"level":"error","message":"Datos invalidos para crear el producto"}
+{"code":3,"level":"error","name":"Create product error"}
+{"code":3,"level":"error","name":"Create product error"}
+{"code":3,"level":"error","name":"Create product error"}
+{"level":"error"}
+{"code":4,"level":"error","name":"update product error"}
+{"level":"error","message":"Error desconocido - ReferenceError: v is not defined"}
+{"code":4,"level":"error","name":"update product error"}
+{"level":"error","message":"Error desconocido - ReferenceError: v is not defined"}
+{"level":"error","message":"Error desconocido - ReferenceError: v is not defined"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error"}
+{"level":"error","message":"Error desconocido - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client"}
+{"level":"error","message":"Error desconocido - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client"}
+{"level":"error","message":"Error desconocido - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client"}
+{"level":"error","message":"Error desconocido - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client"}
+{"level":"error","message":"Error desconocido - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client"}
+{"level":"error","message":"Error desconocido - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client"}
+{"level":"error","message":"Error desconocido - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client"}
+{"level":"error","message":"Error desconocido - Error [ERR_HTTP_HEADERS_SENT]: Cannot set headers after they are sent to the client"}

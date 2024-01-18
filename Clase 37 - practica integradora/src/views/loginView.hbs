@@ -1,0 +1,21 @@
+<div class="mx-auto" style="width: 400px;">
+<h1>Login</h1>
+
+<p style="color: green;">{{message}}</p>
+<p style="color: red;">{{error}}</p>
+
+<form method="post" action="/api/sessions/login">
+    <input type="email" name="email" placeholder="Tu Correo"/>
+    <br/><br/>
+    <input type="password" name="password" placeholder="Tu Contraseña"/>
+    <br/><br/>
+    <button class="btn btn-secundary">Log In</button>
+    <button class="btn btn-warning" id="forgotBtn" >Olvide la contraseña</button>
+    <a class="btn btn-primary" href="/api/sessions/signup-github"> GitHub Login
+
+    </a>
+</form>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/js/loginview.js"></script>
